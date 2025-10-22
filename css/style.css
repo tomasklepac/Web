@@ -223,19 +223,24 @@ section p:first-of-type {
     gap: 40px;
     max-width: 1100px;
     margin: 60px auto 0;
+    align-items: flex-start;
 }
 
 /* === Karta služby === */
 .card {
     flex: 1 1 280px;
     max-width: 300px;
+    min-height: 360px;
     background: var(--card-bg);
     border-radius: 12px;
-    padding: 40px 25px;
+    padding: 28px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
-    overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 
 /* Efekt gradientu na hover */
 .card::before {
@@ -306,22 +311,26 @@ section p:first-of-type {
 /* === Layout kroků === */
 .steps {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
     gap: 40px;
     max-width: 1100px;
     margin: 60px auto 0;
 }
 
-/* === Karta kroku === */
 .step {
     flex: 1 1 280px;
     max-width: 300px;
+    min-height: 300px;
     background: var(--card-bg);
     border-radius: 12px;
-    padding: 40px 25px;
+    padding: 28px 22px 0;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -386,17 +395,33 @@ section p:first-of-type {
     border-radius: 10px;
     overflow: hidden;
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+
 .project img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
 }
 
-.project p { padding: 15px; }
-.project:hover { transform: translateY(-6px); box-shadow: 0 8px 25px rgba(106, 224, 255, 0.3); }
+.project p {
+    padding: 18px 14px 0;
+    font-weight: 600;
+    color: #ddd;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(106, 224, 255, 0.2);
+}
 
 .project-link {
     display: inline-block;
@@ -536,4 +561,74 @@ footer {
 
     .steps, .service-cards, .portfolio-grid { flex-direction: column; align-items: center; }
     .step, .card { width: 80%; max-width: 350px; }
+}
+
+
+/* === HAMBURGER MENU === */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 26px;
+    height: 22px;
+    justify-content: space-between;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* Skryj checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* === MOBILNÍ VERZE === */
+@media (max-width: 900px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background: rgba(15, 17, 22, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transition: right 0.4s ease;
+        z-index: 99;
+    }
+
+    /* otevření menu */
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        right: 0;
+    }
+
+    .menu-icon {
+        display: flex;
+        z-index: 100;
+    }
+
+    /* animace ikonky při otevření */
+    #menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* trochu úpravy pro logo a zarovnání */
+    .navbar {
+        padding: 15px 25px;
+    }
 }
