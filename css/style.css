@@ -69,10 +69,11 @@ section p:first-of-type {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: var(--accent-2);
+.logo img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    display: block;
 }
 
 .nav-links {
@@ -291,6 +292,111 @@ section p:first-of-type {
 .card:hover i {
     transform: scale(1.1);
     color: var(--accent-2);
+}
+
+/* ==========================================================
+   SEKCE CENÍK
+========================================================== */
+.pricing {
+    background: transparent;
+    padding: 120px 20px;
+}
+
+.pricing-intro {
+    color: #ccc;
+    font-size: 1.1em;
+    margin-bottom: 60px;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 60px auto 0;
+    align-items: flex-start;
+}
+
+/* === Jednotlivá karta === */
+.pricing-card {
+    flex: 1 1 280px;
+    max-width: 300px;
+    min-height: 415px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover efekt s jemným zvýrazněním */
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(106, 224, 255, 0.2);
+}
+
+/* Nadpis */
+.pricing-card h3 {
+    color: var(--accent-1);
+    margin-bottom: 12px;
+}
+
+/* Cena */
+.pricing-card .price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--accent-2);
+    margin-bottom: 18px;
+}
+
+/* Seznam funkcí */
+.pricing-card ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+}
+
+.pricing-card ul li {
+    color: #ccc;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 18px;
+}
+
+.pricing-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-1);
+}
+
+/* Poznámka pod kartami */
+.pricing-note {
+    color: #ccc;
+    font-size: 1em;
+    margin-top: 60px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* === Responsivita === */
+@media (max-width: 900px) {
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 80%;
+        max-width: 350px;
+    }
 }
 
 

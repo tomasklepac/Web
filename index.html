@@ -5,44 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tomáš Klepač – Web Developer</title>
 
-    <!-- SEO META -->
+    <!-- ==========================================
+         SEO META – základní informace pro Google
+    =========================================== -->
     <meta name="description" content="Tomáš Klepač – web developer z Plzně. Tvořím moderní, rychlé a funkční weby pro freelancery a malé firmy.">
     <meta name="keywords" content="Tomáš Klepač, web developer, tvorba webu, Plzeň, freelance, web design, frontend developer, programátor webů">
     <meta name="author" content="Tomáš Klepač">
     <meta name="robots" content="index, follow">
+
+    <!-- Meta tagy pro název webu ve vyhledávačích a aplikacích -->
+    <meta name="application-name" content="Tomáš Klepač – Web Developer">
+    <meta name="apple-mobile-web-app-title" content="Tomáš Klepač">
+    <meta name="og:site_name" content="Tomáš Klepač – Web Developer">
+    <meta name="site_name" content="Tomáš Klepač – Web Developer">
+
+    <!-- Kanonická URL (zabraňuje duplicitní indexaci) -->
     <link rel="canonical" href="https://tomasklepac.cz/">
 
-    <!-- Open Graph (pro sdílení na sociálních sítích) -->
+    <!-- Open Graph – metadata pro sdílení na sociálních sítích -->
     <meta property="og:title" content="Tomáš Klepač – Web Developer">
     <meta property="og:description" content="Tvořím moderní, rychlé a funkční weby pro freelancery a malé firmy.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tomasklepac.cz/">
     <meta property="og:image" content="https://tomasklepac.cz/assets/images/profile.jpg">
 
-    <!-- Twitter Cards (pokud někdo sdílí odkaz na Twitteru / X) -->
+    <!-- Twitter Cards – náhled při sdílení na X (Twitteru) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tomáš Klepač – Web Developer">
     <meta name="twitter:description" content="Tvořím moderní, rychlé a funkční weby pro freelancery a malé firmy.">
     <meta name="twitter:image" content="https://tomasklepac.cz/assets/images/profile.jpg">
 
-    <!-- Style sheets -->
+    <!-- Stylopisy a fonty -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <!-- Favicons -->
+    <!-- Ikony webu pro prohlížeče a mobilní zařízení -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
 </head>
+
 <body>
+<!-- ==========================================
+     NAVIGACE A HLAVIČKA
+=========================================== -->
 <header>
     <nav class="navbar">
-        <div class="logo">TK</div>
+        <div class="logo">
+            <img src="assets/images/logo_clear.png" alt="Tomáš Klepač – logo">
+        </div>
 
-        <!-- Tlačítko hamburger -->
+        <!-- Checkbox hack – ovládá mobilní hamburger menu -->
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">
             <span></span>
@@ -54,6 +70,7 @@
         <ul class="nav-links">
             <li><a href="#about">O mně</a></li>
             <li><a href="#services">Služby</a></li>
+            <li><a href="#pricing">Ceník</a></li>
             <li><a href="#workflow">Proces</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Kontakt</a></li>
@@ -61,6 +78,9 @@
     </nav>
 </header>
 
+<!-- ==========================================
+     HERO SEKCE – hlavní úvodní část stránky
+=========================================== -->
 <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -68,11 +88,12 @@
         <p>Tvořím moderní a rychlé weby pro freelancery a malé firmy.</p>
         <a href="#portfolio" class="btn">Zobrazit projekty</a>
     </div>
-    <div class="scroll-down">
-        <span></span>
-    </div>
+    <div class="scroll-down"><span></span></div>
 </section>
 
+<!-- ==========================================
+     SEKCE O MNĚ – představení a kontext
+=========================================== -->
 <section id="about" class="about fade-in">
     <div class="about-container">
         <div class="about-text">
@@ -83,86 +104,142 @@
                 ale i fungovaly rychle a intuitivně.
             </p>
             <p>
-                Jsem student <strong>počítačových věd na Fakultě aplikovaných věd Západočeské univerzity v Plzni</strong>,
-                kde se zaměřuji hlavně na programování a vývoj aplikací.
-                Studium mi dává pevné technické základy, ale nejvíc se učím tím, že tvořím vlastní projekty —
-                od malých webů po komplexnější aplikace, které propojují design a logiku.
+                Jsem student <strong>počítačových věd na Fakultě aplikovaných věd Západočeské univerzity</strong>,
+                kde se zaměřuji na programování a vývoj aplikací.
+                Nejvíc se učím praxí – tvorbou vlastních projektů od malých webů po větší aplikace.
             </p>
         </div>
 
+        <!-- Fotka vývojáře -->
         <div class="about-photo">
             <img src="assets/images/profile.jpg" alt="Tomáš Klepač – Web Developer">
         </div>
     </div>
 </section>
 
+<!-- ==========================================
+     SEKCE SLUŽBY – přehled hlavních nabídek
+=========================================== -->
 <section id="services" class="services fade-in">
     <h2>Co nabízím</h2>
     <div class="service-cards">
+        <!-- 1. karta -->
         <div class="card">
             <i class="fa-solid fa-code"></i>
             <h3>Tvorba webu</h3>
-            <p>Navrhnu a vytvořím moderní web od základů až po spuštění.
-                Rychlý, přehledný a přizpůsobený přesně tomu, co potřebujete.</p>
+            <p>Moderní web od návrhu po spuštění. Rychlý, přehledný a přizpůsobený vašim potřebám.</p>
         </div>
+
+        <!-- 2. karta -->
         <div class="card">
             <i class="fa-solid fa-server"></i>
             <h3>Hosting & Správa</h3>
-            <p>Postarám se o hosting, správu a pravidelné aktualizace, aby váš web běžel spolehlivě a bez starostí.</p>
+            <p>Postarám se o hosting, údržbu a pravidelné aktualizace, aby web běžel bez problémů.</p>
         </div>
+
+        <!-- 3. karta -->
         <div class="card">
-            <i class="fa-solid fa-comments"></i>
-            <h3>Konzultace</h3>
-            <p>Pomohu s úpravou, optimalizací i rozvojem vašeho webu.
-                Ať už potřebujete zrychlit načítání, zlepšit SEO nebo poradit s designem.</p>
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <h3>SEO & Indexace</h3>
+            <p>Optimalizace pro vyhledávače – meta tagy, struktura, indexace pro lepší viditelnost.</p>
         </div>
     </div>
 </section>
 
+<!-- ==========================================
+     SEKCE CENÍK – orientační ceny za služby
+=========================================== -->
+<section id="pricing" class="pricing fade-in">
+    <h2>Ceník</h2>
+    <p class="pricing-intro">
+        Každý web dělám na míru. Níže najdeš orientační přehled běžných typů webů.
+    </p>
+
+    <div class="pricing-cards">
+        <!-- 1. varianta -->
+        <div class="pricing-card">
+            <h3>Jednoduchý web</h3>
+            <p class="price">od 2 000 Kč</p>
+            <ul>
+                <li>1–3 podstránky</li>
+                <li>Statický obsah bez databáze</li>
+                <li>Informační web (prezentace, kontakty, nabídka služeb)</li>
+                <li>Vhodné pro osobní web, malý podnik, portfolio</li>
+            </ul>
+        </div>
+
+        <!-- 2. varianta -->
+        <div class="pricing-card">
+            <h3>Rozšířený web</h3>
+            <p class="price">od 4 000 Kč</p>
+            <ul>
+                <li>4+ podstránek</li>
+                <li>Dynamický obsah (např. správa textů, galerií)</li>
+                <li>Napojení na externí služby (mapy, formuláře)</li>
+                <li>Pro menší firmy s častými aktualizacemi</li>
+            </ul>
+        </div>
+
+        <!-- 3. varianta -->
+        <div class="pricing-card">
+            <h3>Webová aplikace / e-shop</h3>
+            <p class="price">od 7 000 Kč</p>
+            <ul>
+                <li>Přihlášení uživatelů a databáze dat</li>
+                <li>Rezervační či objednávkový systém</li>
+                <li>Admin rozhraní pro správu dat</li>
+                <li>Vhodné pro e-shopy nebo interní systémy</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="pricing-note">
+        Finální cenu stanovím po krátké domluvě – nezávazně a zdarma.
+        Záleží hlavně na funkcích, rozsahu a grafických požadavcích.
+    </p>
+</section>
+
+<!-- ==========================================
+     SEKCE PROCES – jak probíhá spolupráce
+=========================================== -->
 <section id="workflow" class="workflow fade-in">
     <h2>Proces výroby</h2>
-    <p class="workflow-intro">Od prvního nápadu až po spuštění webu – všechno má svůj jasný postup.</p>
+    <p class="workflow-intro">Od prvního nápadu až po spuštění webu – vše má jasný postup.</p>
 
     <div class="steps">
         <div class="step">
-            <div class="icon">
-                <i class="fa-solid fa-comments"></i>
-            </div>
+            <div class="icon"><i class="fa-solid fa-comments"></i></div>
             <h3>Konzultace</h3>
-            <p>Probereme vaše cíle, styl a cílovou skupinu. Navrhnu řešení, které dává smysl.</p>
+            <p>Probereme cíle a představy, abych mohl navrhnout řešení na míru.</p>
         </div>
 
         <div class="step">
-            <div class="icon">
-                <i class="fa-solid fa-pencil-ruler"></i>
-            </div>
+            <div class="icon"><i class="fa-solid fa-pencil-ruler"></i></div>
             <h3>Návrh</h3>
-            <p>Vytvořím strukturu a design, který vystihne vaši značku a přivede uživatele k cíli.</p>
+            <p>Vytvořím strukturu a design, který sedí vašemu stylu a značce.</p>
         </div>
 
         <div class="step">
-            <div class="icon">
-                <i class="fa-solid fa-code"></i>
-            </div>
+            <div class="icon"><i class="fa-solid fa-code"></i></div>
             <h3>Vývoj</h3>
-            <p>Web kóduju ručně – čistě, rychle a responzivně. Žádné přebujelé šablony.</p>
+            <p>Web kóduju ručně – čistě, rychle a responzivně, bez zbytečných šablon.</p>
         </div>
 
         <div class="step">
-            <div class="icon">
-                <i class="fa-solid fa-rocket"></i>
-            </div>
+            <div class="icon"><i class="fa-solid fa-rocket"></i></div>
             <h3>Spuštění</h3>
-            <p>Postarám se o hosting, optimalizaci i bezpečnost. Web jede a vy máte klid.</p>
+            <p>Zařídím hosting, nasazení, zabezpečení i optimalizaci výkonu.</p>
         </div>
     </div>
 </section>
 
+<!-- ==========================================
+     SEKCE PORTFOLIO – ukázky projektů
+=========================================== -->
 <section id="portfolio" class="portfolio fade-in">
     <h2>Portfolio</h2>
     <p><i>Pouze demonstrační weby</i></p>
     <div class="portfolio-grid">
-
         <div class="project">
             <a href="https://tomasklepac.cz/coffeelab" target="_blank" class="project-link">
                 <img src="assets/images/kavarna.png" alt="Web pro kavárnu">
@@ -179,12 +256,15 @@
     </div>
 </section>
 
+<!-- ==========================================
+     SEKCE KONTAKT – přímé spojení
+=========================================== -->
 <section id="contact" class="contact fade-in">
     <h2>Kontakt</h2>
-    <p>Ozvi se mi přímo – na telefon nebo mail.</p>
+    <p>Ozvi se mi přímo – na telefon nebo e-mail.</p>
 
     <div class="contact-links">
-        <a href="mailto:info@tomasklepac.cz.cz" class="contact-link">
+        <a href="mailto:info@tomasklepac.cz" class="contact-link">
             <i class="fa-solid fa-envelope"></i> <span>info@tomasklepac.cz</span>
         </a>
         <a href="tel:+420602393870" class="contact-link">
@@ -192,50 +272,44 @@
         </a>
     </div>
 
+    <!-- Odkazy na sociální sítě -->
     <ul class="social-icons fade-in">
         <li class="icon-content">
-            <a data-social="linkedin" aria-label="LinkedIn"
-               href="https://www.linkedin.com/in/tomasklepac" target="_blank" rel="noopener">
+            <a data-social="linkedin" href="https://www.linkedin.com/in/tomasklepac" target="_blank" rel="noopener">
                 <div class="filled"></div>
-                <!-- LinkedIn SVG -->
-                <svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
-                    <path fill="currentColor"
-                          d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.06c.62-1.17 2.14-2.4 4.41-2.4 4.72 0 5.59 3.11 5.59 7.16V24h-5v-6.95c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.66 1.8-2.66 3.66V24h-5V8z"/>
-                </svg>
+                <!-- SVG ikona LinkedIn -->
+                <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.06c.62-1.17 2.14-2.4 4.41-2.4 4.72 0 5.59 3.11 5.59 7.16V24h-5v-6.95c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.66 1.8-2.66 3.66V24h-5V8z"/></svg>
             </a>
-            <div class="tooltip">LinkedIn</div>
         </li>
 
         <li class="icon-content">
-            <a data-social="github" aria-label="GitHub"
-               href="https://github.com/tomasklepac" target="_blank" rel="noopener">
+            <a data-social="github" href="https://github.com/tomasklepac" target="_blank" rel="noopener">
                 <div class="filled"></div>
-                <!-- GitHub SVG -->
-                <svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
-                    <path fill="currentColor"
-                          d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.29-1.68-1.29-1.68-1.06-.73.08-.72.08-.72 1.18.08 1.8 1.21 1.8 1.21 1.04 1.78 2.72 1.27 3.39.97.1-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.22 1.18a11.2 11.2 0 0 1 5.86 0c2.24-1.49 3.22-1.18 3.22-1.18.63 1.59.23 2.77.11 3.06.74.8 1.19 1.82 1.19 3.08 0 4.43-2.69 5.39-5.25 5.67.42.36.8 1.06.8 2.15v3.18c0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/>
-                </svg>
+                <!-- SVG ikona GitHub -->
+                <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.29-1.68-1.29-1.68-1.06-.73.08-.72.08-.72 1.18.08 1.8 1.21 1.8 1.21 1.04 1.78 2.72 1.27 3.39.97.1-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.22 1.18a11.2 11.2 0 0 1 5.86 0c2.24-1.49 3.22-1.18 3.22-1.18.63 1.59.23 2.77.11 3.06.74.8 1.19 1.82 1.19 3.08 0 4.43-2.69 5.39-5.25 5.67.42.36.8 1.06.8 2.15v3.18c0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
             </a>
-            <div class="tooltip">GitHub</div>
         </li>
     </ul>
 </section>
 
+<!-- ==========================================
+     FOOTER – patička webu
+=========================================== -->
 <footer>
     <p>© 2025 Tomáš Klepač – Všechna práva vyhrazena.</p>
 </footer>
 
-
+<!-- ==========================================
+     JAVASCRIPT – zavírání mobilního menu
+=========================================== -->
 <script src="js/main.js"></script>
-
 <script>
-    // zavře menu po kliknutí na libovolný odkaz
+    // Zavře menu po kliknutí na libovolný odkaz
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             document.getElementById('menu-toggle').checked = false;
         });
     });
 </script>
-
 </body>
-</html>
+</
