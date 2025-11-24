@@ -90,6 +90,16 @@ section p:first-of-type {
 
 .nav-links a:hover { color: #b47fff; }
 
+.nav-links a:focus-visible,
+.menu-icon:focus-visible,
+.btn:focus-visible,
+.contact-link:focus-visible,
+.project-link:focus-visible {
+    outline: 2px solid var(--accent-2);
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
 
 /* ==========================================================
    HERO SEKCE

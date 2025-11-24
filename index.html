@@ -2,8 +2,9 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tomáš Klepač - Web Developer</title>
+    <title>Tomáš Klepač – Web Developer</title>
 
     <!-- ==========================================
          SEO META - základní informace pro Google
@@ -23,19 +24,24 @@
     <link rel="canonical" href="https://tomasklepac.cz/">
 
     <!-- Open Graph - metadata pro sdílení na sociálních sítích -->
-    <meta property="og:title" content="Tomáš Klepač - Web Developer">
+    <meta property="og:title" content="Tomáš Klepač – Web Developer">
     <meta property="og:description" content="Tvořím moderní, rychlé a funkční weby pro freelancery a malé firmy.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tomasklepac.cz/">
     <meta property="og:image" content="https://tomasklepac.cz/assets/images/profile.jpg">
+    <meta property="og:image:alt" content="Profilová fotografie Tomáše Klepače">
 
-    <!-- Twitter Cards - náhled při sdílení na X (Twitteru) -->
+    <!-- Twitter Cards – náhled při sdílení na X (Twitteru) -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tomáš Klepač - Web Developer">
+    <meta name="twitter:title" content="Tomáš Klepač – Web Developer">
     <meta name="twitter:description" content="Tvořím moderní, rychlé a funkční weby pro freelancery a malé firmy.">
     <meta name="twitter:image" content="https://tomasklepac.cz/assets/images/profile.jpg">
+    <meta name="theme-color" content="#0b0c10">
 
     <!-- Stylopisy a fonty -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -52,6 +58,23 @@
     <link rel="icon" sizes="256x256" href="assets/icons/logo-256x256.ico">
     <link rel="icon" sizes="512x512" href="assets/icons/logo-512x512.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/logo-256x256.ico">
+    <link rel="mask-icon" href="assets/icons/mask-icon.svg" color="#1f8ef1">
+    <link rel="manifest" href="assets/icons/manifest.webmanifest">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Tomáš Klepač",
+      "jobTitle": "Web Developer",
+      "url": "https://tomasklepac.cz/",
+      "sameAs": [
+        "https://www.linkedin.com/in/tomasklepac",
+        "https://github.com/tomasklepac"
+      ],
+      "image": "https://tomasklepac.cz/assets/images/profile.jpg"
+    }
+    </script>
 </head>
 
 <body>
@@ -61,19 +84,19 @@
 <header>
     <nav class="navbar">
         <div class="logo">
-            <img src="assets/images/logo_clear.png" alt="Tomáš Klepač - logo">
+            <img src="assets/images/logo_clear.png" alt="Tomáš Klepač – logo">
         </div>
 
-        <!-- Checkbox hack - ovládá mobilní hamburger menu -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
+        <!-- Checkbox hack – ovládá mobilní hamburger menu -->
+        <input type="checkbox" id="menu-toggle" aria-hidden="true">
+        <label for="menu-toggle" class="menu-icon" role="button" aria-label="Otevřít navigaci" aria-controls="primary-nav" aria-expanded="false" tabindex="0">
             <span></span>
             <span></span>
             <span></span>
         </label>
 
         <!-- Navigační odkazy -->
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-nav" aria-hidden="true">
             <li><a href="#about">O mně</a></li>
             <li><a href="#services">Služby</a></li>
             <li><a href="#pricing">Ceník</a></li>
@@ -118,7 +141,7 @@
 
         <!-- Fotka vývojáře -->
         <div class="about-photo">
-            <img src="assets/images/profile.jpg" alt="Tomáš Klepač - Web Developer">
+            <img src="assets/images/profile.jpg" alt="Tomáš Klepač – Web Developer" loading="lazy">
         </div>
     </div>
 </section>
@@ -248,14 +271,14 @@
     <div class="portfolio-grid">
         <div class="project">
             <a href="https://tomasklepac.cz/coffeelab" target="_blank" class="project-link">
-                <img src="assets/images/kavarna.png" alt="Web pro kavárnu">
+                <img src="assets/images/kavarna.png" alt="Web pro kavárnu" loading="lazy">
                 <p>Kavárna CoffeeLab</p>
             </a>
         </div>
 
         <div class="project">
             <a href="https://tomasklepac.cz/gentlemansforge" target="_blank" class="project-link">
-                <img src="assets/images/barbershop.png" alt="Web pro barbershop">
+                <img src="assets/images/barbershop.png" alt="Web pro barbershop" loading="lazy">
                 <p>Barber shop Gentleman's Forge</p>
             </a>
         </div>
@@ -306,16 +329,39 @@
 </footer>
 
 <!-- ==========================================
-     JAVASCRIPT - zavírání mobilního menu
+     JAVASCRIPT – zavírání mobilního menu
 =========================================== -->
 <script src="js/main.js"></script>
 <script>
-    // Zavře menu po kliknutí na libovolný odkaz
+    // A11y: synchronizace stavu hamburgeru a uzavření menu po kliku
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuLabel = document.querySelector('.menu-icon');
+    const navLinks = document.getElementById('primary-nav');
+
+    const syncMenuState = () => {
+        const expanded = menuToggle.checked;
+        menuLabel.setAttribute('aria-expanded', expanded);
+        menuLabel.setAttribute('aria-label', expanded ? 'Zavřít navigaci' : 'Otevřít navigaci');
+        navLinks.setAttribute('aria-hidden', (!expanded).toString());
+    };
+
+    menuToggle.addEventListener('change', syncMenuState);
+    menuLabel.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            menuToggle.checked = !menuToggle.checked;
+            syncMenuState();
+        }
+    });
+
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            document.getElementById('menu-toggle').checked = false;
+            menuToggle.checked = false;
+            syncMenuState();
         });
     });
+
+    syncMenuState();
 </script>
 </body>
 </html>
