@@ -534,8 +534,10 @@ section p:first-of-type {
 }
 
 .project p {
-    padding: 12px 14px 14px;
+    padding: 10px 12px 8px;
     font-weight: 600;
+    font-size: 0.95em;
+    line-height: 1.3;
     color: #ddd;
     display: flex;
     align-items: center;
