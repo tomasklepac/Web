@@ -55,8 +55,9 @@
     <link rel="icon" sizes="64x64" href="assets/icons/logo-64x64.ico">
     <link rel="icon" sizes="96x96" href="assets/icons/logo96x96.ico">
     <link rel="icon" sizes="128x128" href="assets/icons/logo-128x128.ico">
+    <link rel="icon" sizes="192x192" href="assets/icons/logo-png-192x192.png">
     <link rel="icon" sizes="256x256" href="assets/icons/logo-256x256.ico">
-    <link rel="icon" sizes="512x512" href="assets/icons/logo-512x512.ico">
+    <link rel="icon" sizes="512x512" href="assets/icons/logo-png-512x512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/logo-256x256.ico">
     <link rel="mask-icon" href="assets/icons/mask-icon.svg" color="#1f8ef1">
     <link rel="manifest" href="assets/icons/manifest.webmanifest">
@@ -270,14 +271,14 @@
     <p><i>Pouze demonstrační weby</i></p>
     <div class="portfolio-grid">
         <div class="project">
-            <a href="https://tomasklepac.cz/coffeelab" target="_blank" class="project-link">
+            <a href="https://tomasklepac.cz/coffeelab" target="_blank" rel="noopener" class="project-link">
                 <img src="assets/images/kavarna.png" alt="Web pro kavárnu" loading="lazy">
                 <p>Kavárna CoffeeLab</p>
             </a>
         </div>
 
         <div class="project">
-            <a href="https://tomasklepac.cz/gentlemansforge" target="_blank" class="project-link">
+            <a href="https://tomasklepac.cz/gentlemansforge" target="_blank" rel="noopener" class="project-link">
                 <img src="assets/images/barbershop.png" alt="Web pro barbershop" loading="lazy">
                 <p>Barber shop Gentleman's Forge</p>
             </a>
@@ -337,6 +338,10 @@
     const menuToggle = document.getElementById('menu-toggle');
     const menuLabel = document.querySelector('.menu-icon');
     const navLinks = document.getElementById('primary-nav');
+    const navAnchors = Array.from(document.querySelectorAll('.nav-links a'));
+    const sections = navAnchors
+        .map(a => document.querySelector(a.getAttribute('href')))
+        .filter(Boolean);
 
     const syncMenuState = () => {
         const expanded = menuToggle.checked;
@@ -361,6 +366,22 @@
         });
     });
 
+    const setActiveNav = () => {
+        const scrollPos = window.scrollY + 120;
+        let activeId = sections[0]?.id;
+        sections.forEach(section => {
+            if (section.offsetTop <= scrollPos) {
+                activeId = section.id;
+            }
+        });
+        navAnchors.forEach(a => {
+            const match = a.getAttribute('href').replace('#', '');
+            a.setAttribute('aria-current', match === activeId ? 'page' : 'false');
+        });
+    };
+
+    window.addEventListener('scroll', setActiveNav, { passive: true });
+    setActiveNav();
     syncMenuState();
 </script>
 </body>
