@@ -1,5 +1,5 @@
-/* ==========================================================
-   ZÁKLADNÍ NASTAVENÍ A PROMĚNNÉ
+﻿/* ==========================================================
+   ZĂKLADNĂŤ NASTAVENĂŤ A PROMÄšNNĂ‰
 ========================================================== */
 * {
     margin: 0;
@@ -9,8 +9,8 @@
 
 :root {
     --bg-color: #0b0c10;
-    --accent-1: #1f8ef1;   /* modrá - tech styl */
-    --accent-2: #07ba9f;   /* tyrkysová - kontrast */
+    --accent-1: #1f8ef1;   /* modrĂˇ - tech styl */
+    --accent-2: #07ba9f;   /* tyrkysovĂˇ - kontrast */
     --text-color: #e6e6e6;
     --card-bg: #1a1a1e;
 }
@@ -40,7 +40,7 @@ section { padding: 100px 20px; text-align: center; }
 }
 
 /* ==========================================================
-   TYPOGRAFIE SEKČNÍCH NADPISŮ
+   TYPOGRAFIE SEKÄŚNĂŤCH NADPISĹ®
 ========================================================== */
 section h2 {
     font-size: 2.4em;
@@ -229,7 +229,7 @@ section p:first-of-type {
 
 
 /* ==========================================================
-   SEKCE SLUŽBY
+   SEKCE SLUĹ˝BY
 ========================================================== */
 .services {
     background: transparent;
@@ -246,7 +246,7 @@ section p:first-of-type {
     align-items: flex-start;
 }
 
-/* === Karta služby === */
+/* === Karta sluĹľby === */
 .card {
     flex: 1 1 280px;
     max-width: 300px;
@@ -314,7 +314,7 @@ section p:first-of-type {
 }
 
 /* ==========================================================
-   SEKCE CENÍK
+   SEKCE CENĂŤK
 ========================================================== */
 .pricing {
     background: transparent;
@@ -337,7 +337,7 @@ section p:first-of-type {
     align-items: flex-start;
 }
 
-/* === Jednotlivá karta === */
+/* === JednotlivĂˇ karta === */
 .pricing-card {
     flex: 1 1 280px;
     max-width: 300px;
@@ -352,7 +352,7 @@ section p:first-of-type {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hover efekt s jemným zvýrazněním */
+/* Hover efekt s jemnĂ˝m zvĂ˝raznÄ›nĂ­m */
 .pricing-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 25px rgba(106, 224, 255, 0.2);
@@ -372,7 +372,7 @@ section p:first-of-type {
     margin-bottom: 18px;
 }
 
-/* Seznam funkcí */
+/* Seznam funkcĂ­ */
 .pricing-card ul {
     list-style: none;
     text-align: left;
@@ -388,13 +388,13 @@ section p:first-of-type {
 }
 
 .pricing-card ul li::before {
-    content: "•";
+    content: "â€˘";
     position: absolute;
     left: 0;
     color: var(--accent-1);
 }
 
-/* Poznámka pod kartami */
+/* PoznĂˇmka pod kartami */
 .pricing-note {
     color: #ccc;
     font-size: 1em;
@@ -420,7 +420,7 @@ section p:first-of-type {
 
 
 /* ==========================================================
-   SEKCE WORKFLOW (Proces výroby)
+   SEKCE WORKFLOW (Proces vĂ˝roby)
 ========================================================== */
 .workflow {
     background: transparent;
@@ -433,7 +433,7 @@ section p:first-of-type {
     margin-bottom: 60px;
 }
 
-/* === Layout kroků === */
+/* === Layout krokĹŻ === */
 .steps {
     display: flex;
     flex-wrap: wrap;
@@ -513,37 +513,45 @@ section p:first-of-type {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    align-items: flex-start;
 }
 
 .project {
     background: var(--card-bg);
     border-radius: 10px;
     overflow: hidden;
-    width: 280px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.project a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 
 .project img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
 }
 
 .project p {
-    padding: 8px 12px;
-    font-weight: 600;
-    font-size: 0.92em;
+    padding: 10px 12px;
+    font-weight: 700;
+    font-size: 1em;
     line-height: 1.2;
     margin: 0;
-    min-height: 44px;
     color: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 48px;
+    text-align: center;
 }
 
 .project:hover {
@@ -552,7 +560,9 @@ section p:first-of-type {
 }
 
 .project-link {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -563,7 +573,7 @@ section p:first-of-type {
 
 
 /* ==========================================================
-   SEKCE KONTAKT A SOCIÁLNÍ IKONY
+   SEKCE KONTAKT A SOCIĂLNĂŤ IKONY
 ========================================================== */
 .contact {
     padding: 100px 20px;
@@ -588,7 +598,7 @@ section p:first-of-type {
     font-size: 1.1em;
     background: rgba(255,255,255,0.06);
     padding: 14px 28px;
-    border-radius: 40px; /* ← víc rounded */
+    border-radius: 40px; /* â† vĂ­c rounded */
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
     transition: background 0.3s, transform 0.2s, color 0.3s, box-shadow 0.3s;
 }
@@ -716,7 +726,7 @@ footer {
     display: none;
 }
 
-/* === MOBILNÍ VERZE === */
+/* === MOBILNĂŤ VERZE === */
 @media (max-width: 900px) {
     .nav-links {
         position: fixed;
@@ -734,7 +744,7 @@ footer {
         z-index: 99;
     }
 
-    /* otevření menu */
+    /* otevĹ™enĂ­ menu */
     #menu-toggle:checked + .menu-icon + .nav-links {
         right: 0;
     }
@@ -744,7 +754,7 @@ footer {
         z-index: 100;
     }
 
-    /* animace ikonky při otevření */
+    /* animace ikonky pĹ™i otevĹ™enĂ­ */
     #menu-toggle:checked + .menu-icon span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -755,8 +765,9 @@ footer {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    /* trochu úpravy pro logo a zarovnání */
+    /* trochu Ăşpravy pro logo a zarovnĂˇnĂ­ */
     .navbar {
         padding: 15px 25px;
     }
 }
+
