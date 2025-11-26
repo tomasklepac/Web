@@ -1,4 +1,4 @@
-// === SMOOTH SCROLL ANIMACE NA SCROLL ===
+// === SMOOTH FADE-IN ON SCROLL ===
 document.addEventListener("DOMContentLoaded", () => {
     const fadeElements = document.querySelectorAll(".fade-in");
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeElements.forEach((el) => observer.observe(el));
 });
 
-// === ZMĚNA BARVY NAVBARU PŘI SCROLLU ===
+// === NAVBAR COLOR CHANGE ON SCROLL ===
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {

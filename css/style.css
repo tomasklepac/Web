@@ -1,5 +1,5 @@
 ﻿/* ==========================================================
-   ZĂKLADNĂŤ NASTAVENĂŤ A PROMÄšNNĂ‰
+   BASIC SETTINGS AND VARIABLES
 ========================================================== */
 * {
     margin: 0;
@@ -9,8 +9,8 @@
 
 :root {
     --bg-color: #0b0c10;
-    --accent-1: #1f8ef1;   /* modrĂˇ - tech styl */
-    --accent-2: #07ba9f;   /* tyrkysovĂˇ - kontrast */
+    --accent-1: #1f8ef1;   /* blue - tech style */
+    --accent-2: #07ba9f;   /* turquoise - contrast */
     --text-color: #e6e6e6;
     --card-bg: #1a1a1e;
 }
@@ -40,7 +40,7 @@ section { padding: 100px 20px; text-align: center; }
 }
 
 /* ==========================================================
-   TYPOGRAFIE SEKÄŚNĂŤCH NADPISĹ®
+   SECTION HEADING TYPOGRAPHY
 ========================================================== */
 section h2 {
     font-size: 2.4em;
@@ -58,7 +58,7 @@ section p:first-of-type {
 
 
 /* ==========================================================
-   NAVIGACE
+   NAVIGATION
 ========================================================== */
 .navbar {
     display: flex;
@@ -111,7 +111,7 @@ section p:first-of-type {
 
 
 /* ==========================================================
-   HERO SEKCE
+   HERO SECTION
 ========================================================== */
 .hero {
     height: 100vh;
@@ -194,7 +194,7 @@ section p:first-of-type {
 
 
 /* ==========================================================
-   SEKCE ABOUT
+   ABOUT SECTION
 ========================================================== */
 .about {
     background: transparent;
@@ -229,7 +229,7 @@ section p:first-of-type {
 
 
 /* ==========================================================
-   SEKCE SLUĹ˝BY
+   SERVICES SECTION
 ========================================================== */
 .services {
     background: transparent;
@@ -246,7 +246,7 @@ section p:first-of-type {
     align-items: flex-start;
 }
 
-/* === Karta sluĹľby === */
+/* === Service card === */
 .card {
     flex: 1 1 280px;
     max-width: 300px;
@@ -262,7 +262,7 @@ section p:first-of-type {
 }
 
 
-/* Efekt gradientu na hover */
+/* Gradient effect on hover */
 .card::before {
     content: "";
     position: absolute;
@@ -277,7 +277,7 @@ section p:first-of-type {
     opacity: 0.08;
 }
 
-/* Obsah */
+/* Content */
 .card i {
     font-size: 2.5em;
     color: var(--accent-1);
@@ -302,7 +302,7 @@ section p:first-of-type {
     z-index: 1;
 }
 
-/* Hover efekt */
+/* Hover effect */
 .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 25px rgba(106, 224, 255, 0.2);
@@ -314,7 +314,7 @@ section p:first-of-type {
 }
 
 /* ==========================================================
-   SEKCE CENĂŤK
+   PRICING SECTION
 ========================================================== */
 .pricing {
     background: transparent;
@@ -337,7 +337,7 @@ section p:first-of-type {
     align-items: flex-start;
 }
 
-/* === JednotlivĂˇ karta === */
+/* === Individual card === */
 .pricing-card {
     flex: 1 1 280px;
     max-width: 300px;
@@ -352,19 +352,19 @@ section p:first-of-type {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hover efekt s jemnĂ˝m zvĂ˝raznÄ›nĂ­m */
+/* Hover effect with a subtle highlight */
 .pricing-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 25px rgba(106, 224, 255, 0.2);
 }
 
-/* Nadpis */
+/* Heading */
 .pricing-card h3 {
     color: var(--accent-1);
     margin-bottom: 12px;
 }
 
-/* Cena */
+/* Price */
 .pricing-card .price {
     font-size: 1.4em;
     font-weight: 700;
@@ -372,7 +372,7 @@ section p:first-of-type {
     margin-bottom: 18px;
 }
 
-/* Seznam funkcĂ­ */
+/* Features list */
 .pricing-card ul {
     list-style: none;
     text-align: left;
@@ -388,13 +388,13 @@ section p:first-of-type {
 }
 
 .pricing-card ul li::before {
-    content: "â€˘";
+    content: "\\2022";
     position: absolute;
     left: 0;
     color: var(--accent-1);
 }
 
-/* PoznĂˇmka pod kartami */
+/* Note under the cards */
 .pricing-note {
     color: #ccc;
     font-size: 1em;
@@ -405,7 +405,7 @@ section p:first-of-type {
     line-height: 1.6;
 }
 
-/* === Responsivita === */
+/* === Responsiveness === */
 @media (max-width: 900px) {
     .pricing-cards {
         flex-direction: column;
@@ -420,7 +420,7 @@ section p:first-of-type {
 
 
 /* ==========================================================
-   SEKCE WORKFLOW (Proces vĂ˝roby)
+   WORKFLOW SECTION (Production process)
 ========================================================== */
 .workflow {
     background: transparent;
@@ -433,7 +433,7 @@ section p:first-of-type {
     margin-bottom: 60px;
 }
 
-/* === Layout krokĹŻ === */
+/* === Step layout === */
 .steps {
     display: flex;
     flex-wrap: wrap;
@@ -459,7 +459,7 @@ section p:first-of-type {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* === Efekt gradientu === */
+/* === Gradient effect === */
 .step::before {
     content: "";
     position: absolute;
@@ -474,7 +474,7 @@ section p:first-of-type {
     opacity: 0.08;
 }
 
-/* === Obsah === */
+/* === Content === */
 .step h3 {
     color: var(--accent-1);
     margin: 15px 0 10px;
@@ -506,7 +506,7 @@ section p:first-of-type {
 
 
 /* ==========================================================
-   SEKCE PORTFOLIO
+   PORTFOLIO SECTION
 ========================================================== */
 .portfolio-grid {
     display: flex;
@@ -575,7 +575,7 @@ section p:first-of-type {
 
 
 /* ==========================================================
-   SEKCE KONTAKT A SOCIĂLNĂŤ IKONY
+   CONTACT SECTION AND SOCIAL ICONS
 ========================================================== */
 .contact {
     padding: 100px 20px;
@@ -600,7 +600,7 @@ section p:first-of-type {
     font-size: 1.1em;
     background: rgba(255,255,255,0.06);
     padding: 14px 28px;
-    border-radius: 40px; /* â† vĂ­c rounded */
+    border-radius: 40px; /* more rounded */
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
     transition: background 0.3s, transform 0.2s, color 0.3s, box-shadow 0.3s;
 }
@@ -681,7 +681,7 @@ footer {
 }
 
 /* ==========================================================
-   ANIMACE A RESPONSIVITA
+   ANIMATIONS AND RESPONSIVENESS
 ========================================================== */
 .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
@@ -723,12 +723,12 @@ footer {
     transition: 0.3s;
 }
 
-/* Skryj checkbox */
+/* Hide checkbox */
 #menu-toggle {
     display: none;
 }
 
-/* === MOBILNĂŤ VERZE === */
+/* === MOBILE VERSION === */
 @media (max-width: 900px) {
     .nav-links {
         position: fixed;
@@ -746,7 +746,7 @@ footer {
         z-index: 99;
     }
 
-    /* otevĹ™enĂ­ menu */
+    /* opening the menu */
     #menu-toggle:checked + .menu-icon + .nav-links {
         right: 0;
     }
@@ -756,7 +756,7 @@ footer {
         z-index: 100;
     }
 
-    /* animace ikonky pĹ™i otevĹ™enĂ­ */
+    /* icon animation when opening */
     #menu-toggle:checked + .menu-icon span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -767,7 +767,7 @@ footer {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    /* trochu Ăşpravy pro logo a zarovnĂˇnĂ­ */
+    /* small tweaks for the logo and alignment */
     .navbar {
         padding: 15px 25px;
     }
