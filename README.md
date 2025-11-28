@@ -14,8 +14,5 @@ Portfolio microsite for a web developer from Plzeň. Built as a fast, static fro
 - `js/main.js` — nav toggle/accessibility glue.
 - `assets/` — images and icons.
 
-## Run locally
-Open `index.html` directly in a browser, or serve the folder (e.g. `python -m http.server 8000`) for correct relative paths and caching behavior.
-
-## Author
-Tomáš Klepač — Web Developer
+## Live site
+https://www.tomasklepac.cz/
