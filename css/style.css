@@ -386,7 +386,9 @@ section p:first-of-type {
     width: 42px;
     height: 42px;
     color: var(--accent-1);
-    fill: currentColor;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
     transition: transform 0.3s, color 0.3s;
 }
 
@@ -600,7 +602,9 @@ section p:first-of-type {
     width: 42px;
     height: 42px;
     color: var(--accent-1);
-    fill: currentColor;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
     transition: transform 0.3s, color 0.3s;
 }
 

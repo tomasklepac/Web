@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -9,8 +10,10 @@
     <!-- ==========================================
          SEO META - basic info for Google
     =========================================== -->
-    <meta name="description" content="Tomáš Klepač - web developer z Plzně. Tvořím moderní, rychlé a funkční weby pro freelancery a malé firmy.">
-    <meta name="keywords" content="Tomáš Klepač, web developer, tvorba webu, Plzeň, freelance, web design, frontend developer, programátor webů">
+    <meta name="description"
+        content="Tomáš Klepač - web developer z Plzně. Tvořím moderní, rychlé a funkční weby pro freelancery a malé firmy.">
+    <meta name="keywords"
+        content="Tomáš Klepač, web developer, tvorba webu, Plzeň, freelance, web design, frontend developer, programátor webů">
     <meta name="author" content="Tomáš Klepač">
     <meta name="robots" content="index, follow">
 
@@ -40,8 +43,10 @@
 
     <!-- Stylesheets and fonts -->
     <link rel="preload" href="css/style.css" as="style">
-    <link rel="preload" href="assets/images/hero-desktop.webp" as="image" fetchpriority="high" media="(min-width: 901px)">
-    <link rel="preload" href="assets/images/hero-mobile.webp" as="image" fetchpriority="high" media="(max-width: 900px)">
+    <link rel="preload" href="assets/images/hero-desktop.webp" as="image" fetchpriority="high"
+        media="(min-width: 901px)">
+    <link rel="preload" href="assets/images/hero-mobile.webp" as="image" fetchpriority="high"
+        media="(max-width: 900px)">
     <link rel="preload" href="assets/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/poppins-latin-ext-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.css" />
@@ -78,329 +83,385 @@
 </head>
 
 <body>
-<a class="skip-link" href="#main-content">Přeskočit na hlavní obsah</a>
-<!-- ==========================================
+    <a class="skip-link" href="#main-content">Přeskočit na hlavní obsah</a>
+    <!-- ==========================================
      NAVIGATION AND HEADER
 =========================================== -->
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            <picture>
-                <source srcset="assets/images/logo_clear.webp" type="image/webp">
-                <source srcset="assets/images/logo_clear-256.png" type="image/png">
-                <img src="assets/images/logo_clear-256.png" alt="Tomáš Klepač - logo" width="42" height="42" loading="lazy" decoding="async">
-            </picture>
-        </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <picture>
+                    <source srcset="assets/images/logo_clear.webp" type="image/webp">
+                    <source srcset="assets/images/logo_clear-256.png" type="image/png">
+                    <img src="assets/images/logo_clear-256.png" alt="Tomáš Klepač - logo" width="42" height="42"
+                        loading="lazy" decoding="async">
+                </picture>
+            </div>
 
-        <!-- Checkbox hack controlling the mobile hamburger menu -->
-        <input type="checkbox" id="menu-toggle" aria-hidden="true">
-        <label for="menu-toggle" class="menu-icon" role="button" aria-label="Otevřít navigaci" aria-controls="primary-nav" aria-expanded="false" tabindex="0">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+            <!-- Checkbox hack controlling the mobile hamburger menu -->
+            <input type="checkbox" id="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="menu-icon" role="button" aria-label="Otevřít navigaci"
+                aria-controls="primary-nav" aria-expanded="false" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-        <!-- Navigation links -->
-        <ul class="nav-links" id="primary-nav">
-            <li><a href="#about">O mně</a></li>
-            <li><a href="#services">Služby</a></li>
-            <li><a href="#pricing">Ceník</a></li>
-            <li><a href="#workflow">Proces</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
-</header>
+            <!-- Navigation links -->
+            <ul class="nav-links" id="primary-nav">
+                <li><a href="#about">O mně</a></li>
+                <li><a href="#services">Služby</a></li>
+                <li><a href="#pricing">Ceník</a></li>
+                <li><a href="#workflow">Proces</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main id="main-content">
-<!-- ==========================================
+    <main id="main-content">
+        <!-- ==========================================
      HERO SECTION - main introductory part of the page
 =========================================== -->
-<section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1>Ahoj, jsem <span>Tomáš Klepač</span></h1>
-        <p>Tvořím moderní a rychlé weby pro freelancery a malé firmy.</p>
-        <a href="#portfolio" class="btn">Zobrazit projekty</a>
-    </div>
-    <div class="scroll-down"><span></span></div>
-</section>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Ahoj, jsem <span>Tomáš Klepač</span></h1>
+                <p>Tvořím moderní a rychlé weby pro freelancery a malé firmy.</p>
+                <a href="#portfolio" class="btn">Zobrazit projekty</a>
+            </div>
+            <div class="scroll-down"><span></span></div>
+        </section>
 
-<!-- ==========================================
+        <!-- ==========================================
      ABOUT SECTION - introduction and context
 =========================================== -->
-<section id="about" class="about fade-in">
-    <div class="about-container">
-        <div class="about-text">
-            <h2>O&nbsp;mně</h2>
-            <p>
-                Jmenuju se <strong>Tomáš Klepač</strong> a jsem webový vývojář z Plzně.
-                Baví mě propojovat čistý design s funkčním kódem - aby weby nejen vypadaly dobře,
-                ale i fungovaly rychle a intuitivně.
-            </p>
-            <p>
-                Jsem student <strong>počítačových věd na Fakultě aplikovaných věd Západočeské univerzity</strong>,
-                kde se zaměřuji na programování a vývoj aplikací.
-                Nejvíc se učím praxí - tvorbou vlastních projektů od malých webů po větší aplikace.
-            </p>
-        </div>
+        <section id="about" class="about fade-in">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>O&nbsp;mně</h2>
+                    <p>
+                        Jmenuju se <strong>Tomáš Klepač</strong> a jsem webový vývojář z Plzně.
+                        Baví mě propojovat čistý design s funkčním kódem - aby weby nejen vypadaly dobře,
+                        ale i fungovaly rychle a intuitivně.
+                    </p>
+                    <p>
+                        Jsem student <strong>počítačových věd na Fakultě aplikovaných věd Západočeské
+                            univerzity</strong>,
+                        kde se zaměřuji na programování a vývoj aplikací.
+                        Nejvíc se učím praxí - tvorbou vlastních projektů od malých webů po větší aplikace.
+                    </p>
+                </div>
 
-        <!-- Developer photo -->
-        <div class="about-photo">
-            <picture>
-                <source srcset="assets/images/profile.webp" type="image/webp">
-                <source srcset="assets/images/profile-900.jpg" type="image/jpeg">
-                <img src="assets/images/profile-900.jpg" alt="Tomáš Klepač - Web Developer" loading="lazy" decoding="async" width="900" height="981">
-            </picture>
-        </div>
-    </div>
-</section>
+                <!-- Developer photo -->
+                <div class="about-photo">
+                    <picture>
+                        <source srcset="assets/images/profile.webp" type="image/webp">
+                        <source srcset="assets/images/profile-900.jpg" type="image/jpeg">
+                        <img src="assets/images/profile-900.jpg" alt="Tomáš Klepač - Web Developer" loading="lazy"
+                            decoding="async" width="900" height="981">
+                    </picture>
+                </div>
+            </div>
+        </section>
 
-<!-- ==========================================
+        <!-- ==========================================
      SERVICES SECTION - overview of main offerings
 =========================================== -->
-<section id="services" class="services fade-in">
-    <h2>Co nabízím</h2>
-    <div class="service-cards">
-        <!-- Card 1 -->
-        <div class="card">
-            <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M9 7 5 12l4 5M15 7l4 5-4 5M13 4 11 20" />
-                </svg>
-            </div>
-            <h3>Tvorba webu</h3>
-            <p>Moderní web od návrhu po spuštění. Rychlý, přehledný a přizpůsobený vašim potřebám.</p>
-        </div>
+        <section id="services" class="services fade-in">
+            <h2>Co nabízím</h2>
+            <div class="service-cards">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="icon" aria-hidden="true">
+                        <!-- MonitorSmartphone -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8" />
+                            <path d="M10 19v-3.96 3.15" />
+                            <path d="M7 19h5" />
+                            <rect width="6" height="10" x="16" y="12" rx="2" />
+                        </svg>
+                    </div>
+                    <h3>Tvorba webu</h3>
+                    <p>Moderní web od návrhu po spuštění. Rychlý, přehledný a přizpůsobený vašim potřebám.</p>
+                </div>
 
-        <!-- Card 2 -->
-        <div class="card">
-            <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <rect x="4" y="4" width="16" height="6" rx="1.5" ry="1.5" fill="none" stroke="currentColor" stroke-width="1.6" />
-                    <rect x="4" y="14" width="16" height="6" rx="1.5" ry="1.5" fill="none" stroke="currentColor" stroke-width="1.6" />
-                    <circle cx="7" cy="7" r="0.9" fill="currentColor" />
-                    <circle cx="7" cy="17" r="0.9" fill="currentColor" />
-                    <circle cx="17" cy="7" r="0.9" fill="currentColor" />
-                    <circle cx="17" cy="17" r="0.9" fill="currentColor" />
-                </svg>
-            </div>
-            <h3>Hosting & Správa</h3>
-            <p>Postarám se o hosting, údržbu a pravidelné aktualizace, aby web běžel bez problémů.</p>
-        </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="icon" aria-hidden="true">
+                        <!-- ServerCog -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M4.5 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-.5" />
+                            <path d="M4.5 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-.5" />
+                            <path d="M6 6h.01" />
+                            <path d="M6 18h.01" />
+                        </svg>
+                    </div>
+                    <h3>Hosting & Správa</h3>
+                    <p>Postarám se o hosting, údržbu a pravidelné aktualizace, aby web běžel bez problémů.</p>
+                </div>
 
-        <!-- Card 3 -->
-        <div class="card">
-            <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 16.5 10 11l3 3 4.5-6.5" />
-                    <circle cx="10" cy="11" r="0.8" fill="currentColor" />
-                    <circle cx="14" cy="14" r="0.8" fill="currentColor" />
-                    <circle cx="18" cy="7.5" r="0.8" fill="currentColor" />
-                    <circle cx="5" cy="16.5" r="1" fill="currentColor" />
-                    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M4 20h13" />
-                </svg>
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="icon" aria-hidden="true">
+                        <!-- TrendingUp -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                            <polyline points="17 6 23 6 23 12" />
+                        </svg>
+                    </div>
+                    <h3>SEO & Indexace</h3>
+                    <p>Optimalizace pro vyhledávače - meta tagy, struktura, indexace pro lepší viditelnost.</p>
+                </div>
             </div>
-            <h3>SEO & Indexace</h3>
-            <p>Optimalizace pro vyhledávače - meta tagy, struktura, indexace pro lepší viditelnost.</p>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- ==========================================
+        <!-- ==========================================
      PRICING SECTION - indicative prices for services
 =========================================== -->
-<section id="pricing" class="pricing fade-in">
-    <h2>Ceník</h2>
-    <p class="pricing-intro">
-        Každý web dělám na míru. Níže najdeš orientační přehled běžných typů webů.
-    </p>
+        <section id="pricing" class="pricing fade-in">
+            <h2>Ceník</h2>
+            <p class="pricing-intro">
+                Každý web dělám na míru. Níže najdeš orientační přehled běžných typů webů.
+            </p>
 
-    <div class="pricing-cards">
-        <!-- Option 1 -->
-        <div class="pricing-card">
-            <h3>Jednoduchý web</h3>
-            <p class="price">od 2 000 Kč</p>
-            <ul>
-                <li>1-3 podstránky</li>
-                <li>Statický obsah bez databáze</li>
-                <li>Informační web (prezentace, kontakty, nabídka služeb)</li>
-                <li>Vhodné pro osobní web, malý podnik, portfolio</li>
-            </ul>
-        </div>
+            <div class="pricing-cards">
+                <!-- Option 1 -->
+                <div class="pricing-card">
+                    <h3>Jednoduchý web</h3>
+                    <p class="price">od 2 000 Kč</p>
+                    <ul>
+                        <li>1-3 podstránky</li>
+                        <li>Statický obsah bez databáze</li>
+                        <li>Informační web (prezentace, kontakty, nabídka služeb)</li>
+                        <li>Vhodné pro osobní web, malý podnik, portfolio</li>
+                    </ul>
+                </div>
 
-        <!-- Option 2 -->
-        <div class="pricing-card">
-            <h3>Rozšířený web</h3>
-            <p class="price">od 4 000 Kč</p>
-            <ul>
-                <li>4+ podstránek</li>
-                <li>Dynamický obsah (např. správa textů, galerií)</li>
-                <li>Napojení na externí služby (mapy, formuláře)</li>
-                <li>Pro menší firmy s častějšími aktualizacemi</li>
-            </ul>
-        </div>
+                <!-- Option 2 -->
+                <div class="pricing-card">
+                    <h3>Rozšířený web</h3>
+                    <p class="price">od 4 000 Kč</p>
+                    <ul>
+                        <li>4+ podstránek</li>
+                        <li>Dynamický obsah (např. správa textů, galerií)</li>
+                        <li>Napojení na externí služby (mapy, formuláře)</li>
+                        <li>Pro menší firmy s častějšími aktualizacemi</li>
+                    </ul>
+                </div>
 
-        <!-- Option 3 -->
-        <div class="pricing-card">
-            <h3>Webová aplikace / e-shop</h3>
-            <p class="price">od 7 000 Kč</p>
-            <ul>
-                <li>Přihlášení uživatelů a databáze dat</li>
-                <li>Rezervační či objednávkový systém</li>
-                <li>Admin rozhraní pro správu dat</li>
-                <li>Vhodné pro e-shopy nebo interní systémy</li>
-            </ul>
-        </div>
-    </div>
+                <!-- Option 3 -->
+                <div class="pricing-card">
+                    <h3>Webová aplikace / e-shop</h3>
+                    <p class="price">od 7 000 Kč</p>
+                    <ul>
+                        <li>Přihlášení uživatelů a databáze dat</li>
+                        <li>Rezervační či objednávkový systém</li>
+                        <li>Admin rozhraní pro správu dat</li>
+                        <li>Vhodné pro e-shopy nebo interní systémy</li>
+                    </ul>
+                </div>
+            </div>
 
-    <p class="pricing-note">
-        Finální cenu stanovím po krátké domluvě - nezávazně a zdarma.
-        Záleží hlavně na funkcích, rozsahu a grafických požadavcích.
-    </p>
-</section>
+            <p class="pricing-note">
+                Finální cenu stanovím po krátké domluvě - nezávazně a zdarma.
+                Záleží hlavně na funkcích, rozsahu a grafických požadavcích.
+            </p>
+        </section>
 
-<!-- ==========================================
+        <!-- ==========================================
      PROCESS SECTION - how collaboration works
 =========================================== -->
-<section id="workflow" class="workflow fade-in">
-    <h2>Proces výroby</h2>
-    <p class="workflow-intro">Od prvního nápadu až po spuštění webu - vše má jasný postup.</p>
+        <section id="workflow" class="workflow fade-in">
+            <h2>Proces výroby</h2>
+            <p class="workflow-intro">Od prvního nápadu až po spuštění webu - vše má jasný postup.</p>
 
-    <div class="steps">
-        <div class="step">
-            <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 6.75A2.75 2.75 0 0 1 7.75 4h6.5A2.75 2.75 0 0 1 17 6.75v3.5A2.75 2.75 0 0 1 14.25 13H9l-3 2.25V6.75Z" />
-                    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M8 13h-.25A2.75 2.75 0 0 0 5 15.75V17l-2 1.5V12a2 2 0 0 1 2-2h1.5" />
-                </svg>
+            <div class="steps">
+                <div class="step">
+                    <div class="icon" aria-hidden="true">
+                        <!-- MessageSquareText -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            <path d="M13 8H7" />
+                            <path d="M17 12H7" />
+                        </svg>
+                    </div>
+                    <h3>Konzultace</h3>
+                    <p>Probereme cíle a představy, abych mohl navrhnout řešení na míru.</p>
+                </div>
+
+                <div class="step">
+                    <div class="icon" aria-hidden="true">
+                        <!-- PencilRuler -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m12 19 7-7 3 3-7 7-3-3z" />
+                            <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                            <path d="m2 2 7.586 7.586" />
+                            <circle cx="11" cy="11" r="2" />
+                        </svg>
+                    </div>
+                    <h3>Návrh</h3>
+                    <p>Vytvořím strukturu a design, který sedí vašemu stylu a značce.</p>
+                </div>
+
+                <div class="step">
+                    <div class="icon" aria-hidden="true">
+                        <!-- Code2 -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 16 4-4-4-4" />
+                            <path d="m6 8-4 4 4 4" />
+                            <path d="m14.5 4-5 16" />
+                        </svg>
+                    </div>
+                    <h3>Vývoj</h3>
+                    <p>Web kóduju ručně - čistě, rychle a responzivně, bez zbytečných šablon.</p>
+                </div>
+
+                <div class="step">
+                    <div class="icon" aria-hidden="true">
+                        <!-- Rocket -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                            <path
+                                d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                        </svg>
+                    </div>
+                    <h3>Spuštění</h3>
+                    <p>Zařídím hosting, nasazení, zabezpečení i optimalizaci výkonu.</p>
+                </div>
             </div>
-            <h3>Konzultace</h3>
-            <p>Probereme cíle a představy, abych mohl navrhnout řešení na míru.</p>
-        </div>
+        </section>
 
-        <div class="step">
-            <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 15.5 15.5 4a2.12 2.12 0 0 1 3 3L7 18.5 4 19.5Z" />
-                    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="m14 6 4 4" />
-                    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M11 3.5 4 3v6" />
-                </svg>
-            </div>
-            <h3>Návrh</h3>
-            <p>Vytvořím strukturu a design, který sedí vašemu stylu a značce.</p>
-        </div>
-
-        <div class="step">
-            <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M9 7 5 12l4 5M15 7l4 5-4 5M13 4 11 20" />
-                </svg>
-            </div>
-            <h3>Vývoj</h3>
-            <p>Web kóduju ručně - čistě, rychle a responzivně, bez zbytečných šablon.</p>
-        </div>
-
-        <div class="step">
-            <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 3.5c3.4 0 5 2.7 5.5 5.8l-2.55.52-.52 2.55L12 14.5l-2.43-2.13-.52-2.55L6.5 9.3C7 6.1 8.6 3.5 12 3.5Z" />
-                    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M9.6 12.4 6.5 15.5 5 14l2.2-3.2M14.4 12.4 17.5 15.5 19 14l-2.2-3.2" />
-                    <circle cx="12" cy="9.5" r="1.1" fill="currentColor" />
-                </svg>
-            </div>
-            <h3>Spuštění</h3>
-            <p>Zařídím hosting, nasazení, zabezpečení i optimalizaci výkonu.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ==========================================
+        <!-- ==========================================
      PORTFOLIO SECTION - project samples
 =========================================== -->
-<section id="portfolio" class="portfolio fade-in">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-        <div class="portfolio-feature">
-            <div class="feature-media">
-                <picture>
-                    <source srcset="assets/images/re-moveharmony.webp" type="image/webp">
-                    <source srcset="assets/images/re-moveharmony.jpg" type="image/jpeg">
-                    <img src="assets/images/re-moveharmony.jpg" alt="Re-Move Harmony — klinika pro masáže a pohybové terapie" loading="lazy" decoding="async" width="1200" height="666">
-                </picture>
-                <div class="feature-overlay">
-                    <span class="feature-badge">Re-Move Harmony</span>
-                    <div class="feature-tags">
-                        <span class="tag">Masáže</span>
-                        <span class="tag">Pohybové terapie</span>
-                        <span class="tag">Rezervace</span>
+        <section id="portfolio" class="portfolio fade-in">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-feature">
+                    <div class="feature-media">
+                        <picture>
+                            <source srcset="assets/images/re-moveharmony.webp" type="image/webp">
+                            <source srcset="assets/images/re-moveharmony.jpg" type="image/jpeg">
+                            <img src="assets/images/re-moveharmony.jpg"
+                                alt="Re-Move Harmony — klinika pro masáže a pohybové terapie" loading="lazy"
+                                decoding="async" width="1200" height="666">
+                        </picture>
+                        <div class="feature-overlay">
+                            <span class="feature-badge">Re-Move Harmony</span>
+                            <div class="feature-tags">
+                                <span class="tag">Masáže</span>
+                                <span class="tag">Pohybové terapie</span>
+                                <span class="tag">Rezervace</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <p class="feature-meta">Klinika pro masáže a pohybové terapie</p>
+                        <h3>Re-Move Harmony</h3>
+                        <p class="feature-text">Vícestránkový web pro kliniku: hlavní stránka, přehled služeb,
+                            fotogalerie, tým a kontakt s online rezervacemi.</p>
+                        <div class="feature-actions">
+                            <a href="https://re-moveharmony.cz" target="_blank" class="btn">Přejít na stránku</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="feature-content">
-                <p class="feature-meta">Klinika pro masáže a pohybové terapie</p>
-                <h3>Re-Move Harmony</h3>
-                <p class="feature-text">Vícestránkový web pro kliniku: hlavní stránka, přehled služeb, fotogalerie, tým a kontakt s online rezervacemi.</p>
-                <div class="feature-actions">
-                    <a href="https://re-moveharmony.cz" target="_blank" class="btn">Přejít na stránku</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
 
-<!-- ==========================================
+        <!-- ==========================================
      CONTACT SECTION - direct connection
 =========================================== -->
-<section id="contact" class="contact fade-in">
-    <h2>Kontakt</h2>
-    <p>Ozvi se mi přímo - na telefon nebo e-mail.</p>
+        <section id="contact" class="contact fade-in">
+            <h2>Kontakt</h2>
+            <p>Ozvi se mi přímo - na telefon nebo e-mail.</p>
 
-    <div class="contact-links">
-        <a href="mailto:info@tomasklepac.cz" class="contact-link">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 6.5h16v11H4z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="m4 8 8 5 8-5"/></svg> <span>info@tomasklepac.cz</span>
-        </a>
-        <a href="tel:+420602393870" class="contact-link">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M6.5 4h2l1 4-2 1.5a11.5 11.5 0 0 0 6 6l1.5-2 4 1v2a2 2 0 0 1-2.2 2A13.5 13.5 0 0 1 4.5 7.7 2 2 0 0 1 6.5 4Z"/></svg> <span>+420 602 393 870</span>
-        </a>
-        <a href="Smluvni_podminky.pdf" class="contact-link" target="_blank" rel="noopener" aria-label="Otevřít smluvní podmínky (PDF)">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M6 3.5h8l4 4v13H6z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M14 3.5v4h4"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M8.5 14.5H12a1.5 1.5 0 0 0 0-3H9v6"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M15 12h2"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M16 10.5v3"/></svg> <span>Smluvní podmínky (PDF)</span>
-        </a>
-    </div>
+            <div class="contact-links">
+                <a href="mailto:info@tomasklepac.cz" class="contact-link">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" d="M4 6.5h16v11H4z" />
+                        <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" d="m4 8 8 5 8-5" />
+                    </svg> <span>info@tomasklepac.cz</span>
+                </a>
+                <a href="tel:+420602393870" class="contact-link">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6.5 4h2l1 4-2 1.5a11.5 11.5 0 0 0 6 6l1.5-2 4 1v2a2 2 0 0 1-2.2 2A13.5 13.5 0 0 1 4.5 7.7 2 2 0 0 1 6.5 4Z" />
+                    </svg> <span>+420 602 393 870</span>
+                </a>
+                <a href="Smluvni_podminky.pdf" class="contact-link" target="_blank" rel="noopener"
+                    aria-label="Otevřít smluvní podmínky (PDF)">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" d="M6 3.5h8l4 4v13H6z" />
+                        <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" d="M14 3.5v4h4" />
+                        <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" d="M8.5 14.5H12a1.5 1.5 0 0 0 0-3H9v6" />
+                        <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" d="M15 12h2" />
+                        <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" d="M16 10.5v3" />
+                    </svg> <span>Smluvní podmínky (PDF)</span>
+                </a>
+            </div>
 
-    <!-- Links to social networks -->
-    <ul class="social-icons fade-in">
-        <li class="icon-content">
-            <a data-social="linkedin" href="https://www.linkedin.com/in/tomasklepac" target="_blank" rel="noopener" aria-label="Otevřít profil na LinkedIn">
-                <div class="filled"></div>
-                <!-- SVG icon for LinkedIn -->
-                <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.06c.62-1.17 2.14-2.4 4.41-2.4 4.72 0 5.59 3.11 5.59 7.16V24h-5v-6.95c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.66 1.8-2.66 3.66V24h-5V8z"/></svg>
-            </a>
-        </li>
+            <!-- Links to social networks -->
+            <ul class="social-icons fade-in">
+                <li class="icon-content">
+                    <a data-social="linkedin" href="https://www.linkedin.com/in/tomasklepac" target="_blank"
+                        rel="noopener" aria-label="Otevřít profil na LinkedIn">
+                        <div class="filled"></div>
+                        <!-- SVG icon for LinkedIn -->
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor"
+                                d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.06c.62-1.17 2.14-2.4 4.41-2.4 4.72 0 5.59 3.11 5.59 7.16V24h-5v-6.95c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.66 1.8-2.66 3.66V24h-5V8z" />
+                        </svg>
+                    </a>
+                </li>
 
-        <li class="icon-content">
-            <a data-social="github" href="https://github.com/tomasklepac" target="_blank" rel="noopener" aria-label="Otevřít profil na GitHubu">
-                <div class="filled"></div>
-                <!-- SVG icon for GitHub -->
-                <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.29-1.68-1.29-1.68-1.06-.73.08-.72.08-.72 1.18.08 1.8 1.21 1.8 1.21 1.04 1.78 2.72 1.27 3.39.97.1-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.22 1.18a11.2 11.2 0 0 1 5.86 0c2.24-1.49 3.22-1.18 3.22-1.18.63 1.59.23 2.77.11 3.06.74.8 1.19 1.82 1.19 3.08 0 4.43-2.69 5.39-5.25 5.67.42.36.8 1.06.8 2.15v3.18c0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
-            </a>
-        </li>
-    </ul>
-</section>
+                <li class="icon-content">
+                    <a data-social="github" href="https://github.com/tomasklepac" target="_blank" rel="noopener"
+                        aria-label="Otevřít profil na GitHubu">
+                        <div class="filled"></div>
+                        <!-- SVG icon for GitHub -->
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor"
+                                d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.29-1.68-1.29-1.68-1.06-.73.08-.72.08-.72 1.18.08 1.8 1.21 1.8 1.21 1.04 1.78 2.72 1.27 3.39.97.1-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.22 1.18a11.2 11.2 0 0 1 5.86 0c2.24-1.49 3.22-1.18 3.22-1.18.63 1.59.23 2.77.11 3.06.74.8 1.19 1.82 1.19 3.08 0 4.43-2.69 5.39-5.25 5.67.42.36.8 1.06.8 2.15v3.18c0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </section>
 
-<!-- ==========================================
+        <!-- ==========================================
      FOOTER - site footer
 =========================================== -->
-<!-- End of main content -->
-</main>
-<footer>
-    <p>© 2025 Tomáš Klepač - Všechna práva vyhrazena.</p>
-</footer>
+        <!-- End of main content -->
+    </main>
+    <footer>
+        <p>© 2025 Tomáš Klepač - Všechna práva vyhrazena.</p>
+    </footer>
 
-<!-- ==========================================
+    <!-- ==========================================
      JAVASCRIPT - closing the mobile menu
 =========================================== -->
-<script src="js/main.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
+
 </html>
